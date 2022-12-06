@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKitArama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-0V-7gc">
+                                <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eNk-Vs-XXD"/>
+                                </connections>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5O-gz-wkd">
+                                <rect key="frame" x="0.0" y="103" width="390" height="707"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="707" id="k2g-yw-Xmi"/>
+                                    <constraint firstAttribute="width" constant="390" id="qZX-Xa-X7X"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QrN-0V-7gc" firstAttribute="trailing" secondItem="m5O-gz-wkd" secondAttribute="trailing" id="0G6-V1-5KO"/>
+                            <constraint firstItem="QrN-0V-7gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Sh-3h-vuv"/>
+                            <constraint firstItem="m5O-gz-wkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VYa-I6-Clu"/>
+                            <constraint firstItem="m5O-gz-wkd" firstAttribute="top" secondItem="QrN-0V-7gc" secondAttribute="bottom" id="ZZE-kV-0Iw"/>
+                            <constraint firstItem="QrN-0V-7gc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bAu-qh-fxZ"/>
+                            <constraint firstItem="QrN-0V-7gc" firstAttribute="leading" secondItem="m5O-gz-wkd" secondAttribute="leading" id="kkF-jB-TFj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="m5O-gz-wkd" id="Mh0-fu-y8e"/>
+                        <outlet property="searchBar" destination="QrN-0V-7gc" id="DtC-sU-UxA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
